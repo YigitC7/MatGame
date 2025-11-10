@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>MatGame</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styleOyun.css') }}">
+    </head>
+    <body>
+        <form method="post" action="/oyun">
+            {% if soru %}
+                <p>{{ soru }}</p>
+            {% endif %}
+
+            <input type="text" name="cevap" placeholder="Cevap">
+
+            <button type="submit">Cevapla</button>
+
+            {% if dogru %}
+                <p>Doğru: {{ dogru }}</p>
+            {% endif %}
+
+            {% if yanlis %}
+                <p>Yanlış: {{ yanlis }}</p>
+            {% endif %}
+        </form>
+        <form action="/" method="get">
+            <button type="submit">Menü</button>
+        </form>
+    </body>
+</html>

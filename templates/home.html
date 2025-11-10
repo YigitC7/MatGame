@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>MatGame</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styleHome.css') }}">
+    </head>
+    <body>
+        <form method="post" action="/oyun">
+            <h2>Hazırlayan: <a href="https:github.com/yigitc7">Yigitc7</a></h1>
+            <input type="text" name="sayi1" placeholder="En küçük Sayı">
+            <input type="text" name="sayi2" placeholder="En Büyük Sayı">
+
+
+            <select name="operator" id="operator">
+                <option value="" disabled selected>Matematik İşlemi</option>
+                <option value="+">+</option>
+                <option value="*">×</option>
+                <option value="-">-</option>
+            </select>
+
+            <button type="submit">Başla</button>
+        </form>
+    </body>
+</html>
